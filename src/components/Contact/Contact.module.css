@@ -1,0 +1,28 @@
+.item {
+  list-style: none;
+  display: flex;
+  padding: 15px;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(108, 70, 70);
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.user {
+  text-align: start;
+}
+.user > h3,p {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 150px;
+  background-color: rgb(108, 70, 70);
+  color: azure;
+}
