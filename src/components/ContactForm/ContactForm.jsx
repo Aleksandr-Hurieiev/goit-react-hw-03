@@ -1,12 +1,7 @@
-const ContactForm = ({ value, filterUser }) => {
+const ContactForm = () => {
   return (
     <div>
-      <p></p>
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => filterUser(e.target.value)}
-      />
+     ghdtn 
     </div>
   );
 };

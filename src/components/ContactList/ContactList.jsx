@@ -1,6 +1,8 @@
 import Contact from "../Contact/Contact.jsx";
-import css from './ContactList.jsx'
-const ContactList = ({ userList }) => {
+import css from "./ContactList.jsx";
+
+//
+const ContactList = ({ userList, onDelite }) => {
   return (
     <ul>
       {userList.map((user) => {
@@ -10,6 +12,7 @@ const ContactList = ({ userList }) => {
             id={user.id}
             name={user.name}
             number={user.number}
+            onDelite={onDelite}
           />
         );
       })}

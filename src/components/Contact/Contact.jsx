@@ -1,6 +1,6 @@
 import { IoIosPerson, IoMdCall } from "react-icons/io";
 import css from "./Contact.module.css";
-const Contact = ({ name, number }) => {
+const Contact = ({ id, name, number, onDelite }) => {
   return (
     <>
       <li className={css.item}>
@@ -14,7 +14,11 @@ const Contact = ({ name, number }) => {
             {number}
           </p>
         </div>
-        <button className={css.button} type="button">
+        <button
+          className={css.button}
+          type="button"
+          onClick={() => onDelite(id)}
+        >
           Delete
         </button>
       </li>
