@@ -1,0 +1,9 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 40px;
+}
+.title{
+
+}
