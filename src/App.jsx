@@ -15,7 +15,7 @@ function App() {
     if (localUsers) {
       return JSON.parse(localUsers);
     }
-    return usersContact;
+    return userListJson;
   });
   const [filter, setFilter] = useState("");
   // сохранение в localStorage
@@ -40,6 +40,10 @@ function App() {
       });
     });
   };
+  const onFilterUser = (event) => {
+    const value = event.target.value;
+    setFilter(value);
+  };
   // фильтрация обьекта ..
   const filterUsers = usersContact.filter((user) =>
     user.name.toLowerCase().includes(filter.toLowerCase())
@@ -49,7 +53,7 @@ function App() {
     <div>
       <h1>Phonebook</h1>
       <ContactForm onNewUser={onNewUser} />
-      <SearchBox value={filter} onFilter={setFilter} />
+      <SearchBox value={filter} onFilter={onFilterUser} />
       <ContactList userList={filterUsers} onDelite={onDelite} />
     </div>
   );
